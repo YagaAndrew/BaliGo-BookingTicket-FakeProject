@@ -69,9 +69,15 @@ body {
   object-fit: contain;
 }
 
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .brand-text h2 {
   font-size: 18px;
-  margin-bottom: 3px;
+  letter-spacing: 0.3px;
 }
 
 .brand-text span {
@@ -104,7 +110,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #00a8ff !important;
+  color: #009b00 !important;
 }
 
 .nav-links a::after {
@@ -114,7 +120,7 @@ body {
   bottom: -7px;
   width: 0;
   height: 2px;
-  background-color: #00a8ff;
+  background-color: #009b00;
   transition: width 0.3s ease;
 }
 
