@@ -20,7 +20,7 @@ body {
   min-height: 100vh;
   background-image:
     linear-gradient(rgba(4, 34, 55, 0.55), rgba(4, 34, 55, 0.55)),
-    url("assets/image.png");
+    url("assets/hero-background.png");
   background-size: cover;
   background-position: center;
   position: relative;

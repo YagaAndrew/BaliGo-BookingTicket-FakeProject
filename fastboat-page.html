@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fast-boat.css" />
+    <title>BaliGo Fastboat/Fastboat</title>
+  </head>
+  <body>
+    <!-- NAV SECTION -->
+    <section class="hero" id="fastboat">
+      <header class="navbar">
+        <a href="#" class="brand">
+          <img src="assets/logo.png" alt="BaliGo FastBoat Logo" />
+          <div class="brand-text">
+            <h2>BALI GO FASTBOAT</h2>
+            <span>Your Friendly Booking Agent</span>
+          </div>
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#">Tour & Activities</a></li>
+            <li><a href="#">Fast Boat</a></li>
+            <li><a href="#">Booking</a></li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+    <!-- MAIN -->
+    <main class="fastboat-page">
+      <aside class="search-sidebar">
+        <button class="change-search" id="changeSearch">Change Search</button>
+        <div class="serch-card">
+          <span class="departure-label">DEPARTURE</span>
+          <p class="date" id="departureDate">Thursday, 27 August 2026</p>
+          <div class="route">
+            <div class="location">
+              <span>SANUR</span>
+              <strong>07:30</strong>
+            </div>
+            <div class="arrow">→</div>
+            <div class="location">
+              <span>BANJAR NYUH</span>
+              <strong>08:15</strong>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- BOAT RESULT -->
+      <div class="boat-page">
+        <section class="boat-results">
+          <!-- BOAT CARD 1-->
+          <article class="boat-card">
+            <!-- IMAGE -->
+            <img
+              src="assets/royal-semaya.png"
+              alt="Royal Semaya Fast Boat"
+              class="boat-image"
+            />
+            <!-- INFORMATION -->
+            <div class="boat-info">
+              <div class="boat-name">
+                <span class="direct">DIRECT</span>
+                <h2>Royal Semaya Fast Boat</h2>
+              </div>
+              <div class="features">
+                <span>Free Reschedule</span>
+                <span>Free Cancellation</span>
+              </div>
+              <div class="boat-route">
+                <div class="destination">
+                  <span>SANUR</span>
+                  <strong>07:30</strong>
+                </div>
+                <span class="route-arrow">→</span>
+                <div class="destination">
+                  <span>BANJAR NYUH</span>
+                  <strong>08:15</strong>
+                </div>
+              </div>
+              <!-- BOOK BUTTON -->
+              <hr class="card-divider" />
+              <button
+                class="book-button"
+                onclick="bookBoat('Royal Semaya Fast Boat')"
+              >
+                Book
+              </button>
+            </div>
+            <!-- PRICE -->
+            <div class="boat-price">
+              <span>START FROM</span>
+              <strong>Rp.100.000</strong>
+            </div>
+          </article>
+          <!-- BOAT CARD 2 -->
+          <article class="boat-card">
+            <img
+              src="assets/the-go-cruise.png"
+              alt="The GO Cruise"
+              class="boat-image"
+            />
+            <div class="boat-info">
+              <div class="boat-name">
+                <span class="direct">DIRECT</span>
+                <h2>The GO Cruise</h2>
+              </div>
+              <div class="features">
+                <span>Free Reschedule</span>
+                <span>Free Cancellation</span>
+              </div>
+              <div class="boat-route">
+                <div class="destination">
+                  <span>SANUR</span>
+                  <strong>08:00</strong>
+                </div>
+                <span class="route-arrow">→</span>
+                <div class="destination">
+                  <span>BANJAR NYUH</span>
+                  <strong>08:30</strong>
+                </div>
+              </div>
+              <hr card-divider />
+              <button class="book-button" onclick="bookBoat('The GO Cruise')">
+                Book
+              </button>
+            </div>
+            <!-- PRICE -->
+            <div class="boat-price">
+              <span>START FROM</span>
+              <strong>Rp.150.000</strong>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
