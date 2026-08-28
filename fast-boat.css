@@ -1,0 +1,444 @@
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  color: #111;
+}
+
+/* NAVBAR */
+
+.site-header {
+  width: 100%;
+  background-color: white;
+}
+
+.navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 6%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition:
+    background-color 0,
+    3s ease,
+    box-shadow 0,
+    3s ease;
+}
+
+.navbar:hover {
+  background-color: rgba(232, 232, 232, 0.95);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* BRAND */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111;
+}
+
+.brand img {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text h2 {
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+.brand-text span {
+  font-size: 11px;
+}
+
+.navbar:hover .brand {
+  color: black;
+}
+
+/* NAVIGATION */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3 ease;
+}
+
+.navbar:hover .nav-links a {
+  color: black;
+}
+
+.nav-links a:hover {
+  color: #009b00 !important;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  background-color: #009b00;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* SIDEBAR */
+
+.fastboat-page {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 18px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.change-search {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.change-search:hover {
+  background-color: #222;
+}
+
+/* Search Card */
+
+.search-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.departure-label {
+  background-color: #9cff78;
+  border-radius: 6px;
+  padding: 5px 25px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.date {
+  color: #777;
+  font-size: 11px;
+  margin: 7px 2px;
+}
+
+/* Route */
+
+.route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 5px 10px;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3px;
+}
+
+.location span {
+  font-size: 10px;
+}
+
+.location strong {
+  font-size: 16px;
+}
+
+.arrow {
+  flex-grow: 1;
+  text-align: center;
+  color: #009b00;
+  font-size: 25px !important;
+  transform: scaleX(2.5);
+}
+
+/* RESULT */
+
+.boat-result {
+  width: 100%;
+}
+
+.result-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* BOAT CARD */
+
+.boat-card {
+  width: 100%;
+  max-width: 750px;
+  min-height: 245px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 225px 1fr 120px;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.boat-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* BOAT IMAGE */
+
+.boat-image {
+  width: 225px;
+  height: 195px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+/* BOAT INFORMATION */
+
+.boat-info {
+  padding: 2px 0;
+  position: relative;
+}
+
+.direct {
+  display: inline-block;
+  background-color: #9cff76;
+  border-radius: 5px;
+  padding: 4px 10px;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.boat-name h2 {
+  font-size: 17px;
+  margin-top: 5px;
+}
+
+/* Features */
+
+.features {
+  display: flex;
+  gap: 6px;
+  margin-top: 7px;
+}
+
+.features span {
+  background-color: #f1f1f1;
+  border-radius: 15px;
+  padding: 4px 9px;
+  font-size: 8px;
+  color: #555;
+}
+
+/* BOAT ROUTE */
+
+.boat-route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  margin-top: 25px;
+  padding: 0 5px;
+}
+
+.boat-route div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.boat-route div:last-child {
+  margin-left: auto;
+  text-align: right;
+}
+
+.boat-route span {
+  font-size: 12px;
+}
+
+.boat-route strong {
+  font-size: 16px;
+}
+
+.boat-route .destination:last-child {
+  text-align: center;
+}
+
+.route-arrow {
+  flex-grow: 1;
+  text-align: center;
+  color: #009b00;
+  font-size: 25px !important;
+  transform: scaleX(2.5);
+}
+
+/* Line */
+
+.boat-info hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+}
+
+/* PRICE */
+
+.boat-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: baseline;
+}
+
+.boat-price span {
+  font-size: 9px;
+}
+
+.boat-price strong {
+  font-size: 20px;
+  margin-top: 4px;
+}
+
+/* BOOK BUTTON */
+
+.book-button {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #009b00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.book-button:hover {
+  background-color: #007f00;
+}
+
+/* CARD DIVIDER */
+
+.card-divider {
+  width: 100%;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+  .booking-page {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .book-image {
+    width: 180px;
+  }
+
+  .boat-price {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    height: auto;
+    padding: 15px 0;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .booking-page {
+    margin-top: 25px;
+  }
+
+  .boat-card {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .boat-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .boat-price {
+    position: static;
+    align-items: flex-start;
+    margin-top: 15px;
+  }
+
+  .boat-button {
+    position: static;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
