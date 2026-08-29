@@ -207,17 +207,6 @@ body {
   transform: scaleX(2.5);
 }
 
-/* RESULT */
-
-.boat-result {
-  width: 100%;
-}
-
-.result-title {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
 /* BOAT CARD */
 
 .boat-card {
