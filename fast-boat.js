@@ -3,8 +3,8 @@ const fastboat = [
     id: 1,
     operator: "Royal Semaya Fast Boat",
     image: "assets/royal-semaya.png",
-    from: "Sanur (Bali)",
-    to: "Banjar Nyuh (Nusa Penida)",
+    from: "Sanur(Bali)",
+    to: "Banjar Nyuh(Nusa Penida)",
     date: "2026-08-27",
     departure: "07:30",
     arrival: "08:15",
@@ -14,8 +14,8 @@ const fastboat = [
     id: 2,
     operator: "The GO Cruise",
     image: "assets/the-go-cruise.png",
-    from: "Sanur (Bali)",
-    to: "Banjar Nyuh (Nusa Penida)",
+    from: "Sanur(Bali)",
+    to: "Banjar Nyuh(Nusa Penida)",
     date: "2026-08-27",
     departure: "08:30",
     arrival: "09:15",
@@ -25,8 +25,8 @@ const fastboat = [
     id: 3,
     operator: "Scoot Fast Cruise",
     image: "assets/scoot-cruise.png",
-    from: "Sanur (Bali)",
-    to: "Banjar Nyuh (Nusa Penida)",
+    from: "Sanur(Bali)",
+    to: "Banjar Nyuh(Nusa Penida)",
     date: "2026-08-28",
     departure: "09:00",
     arrival: "09:45",
@@ -36,8 +36,8 @@ const fastboat = [
     id: 4,
     operator: "Kusamba Express",
     image: "assets/kusamba-express.png",
-    from: "Kusamba (Bali)",
-    to: "Sampalan (Nusa Penida)",
+    from: "Kusamba(Bali)",
+    to: "Sampalan(Nusa Penida)",
     date: "2026-08-27",
     departure: "06:30",
     arrival: "07:15",
@@ -71,13 +71,13 @@ if (departureDateEl) {
 
 const locationSpans = document.querySelectorAll(".search-card .location span");
 if (locationSpans.length >= 2) {
-  locationSpans[0].textContent = selectedFrom.toUpperCase();
+  locationSpans[0].textContent = selectedForm.toUpperCase();
   locationSpans[1].textContent = selectedTo.toUpperCase();
 }
 
-const filteredFastboats = fastboats.filter(function (boat) {
+const filteredFastboats = fastboat.filter(function (boat) {
   return (
-    boat.from.toLowerCase() === selectedFrom.toLowerCase() &&
+    boat.from.toLowerCase() === selectedForm.toLowerCase() &&
     boat.to.toLowerCase() === selectedTo.toLowerCase() &&
     boat.date === selectedDate
   );
@@ -126,7 +126,7 @@ function renderBoatCard(boat) {
 
 if (boatResults) {
   if (filteredFastboats.length === 0) {
-    boatResults.innerHTML = `<p class="no-result">Tidak ada jadwal fastboat untuk rute dan tanggal yang dipilih.</p>`;
+    boatResults.innerHTML = `<p class="no-result">There is no fast boat schedule for the selected route and date.</p>`;
   } else {
     boatResults.innerHTML = filteredFastboats.map(renderBoatCard).join("");
   }
@@ -138,7 +138,7 @@ function bookBoat(boatId, operatorName) {
   const bookingParams = new URLSearchParams({
     boatId: boatId,
     operator: operatorName,
-    from: selectedFrom,
+    from: selectedForm,
     to: selectedTo,
     date: selectedDate,
     trip: selectedTrip,
@@ -157,7 +157,7 @@ const changeSearchBtn = document.getElementById("changeSearch");
 if (changeSearchBtn) {
   changeSearchBtn.addEventListener("click", function () {
     const backParams = new URLSearchParams({
-      from: selectedFrom,
+      from: selectedForm,
       to: selectedTo,
       date: selectedDate,
     });
