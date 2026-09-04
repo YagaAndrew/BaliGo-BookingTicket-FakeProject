@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="booking.css" />
+    <link rel="stylesheet" href="footer.css" />
+    <title>BaliGo Fastboat/Booking</title>
+  </head>
+  <body>
+    <!-- NAV SECTION -->
+    <section class="hero" id="fastboat">
+      <header class="navbar">
+        <a href="#" class="brand">
+          <img src="assets/logo.png" alt="BaliGo FastBoat Logo" />
+          <div class="brand-text">
+            <h2>BALI GO FASTBOAT</h2>
+            <span>Your Friendly Booking Agent</span>
+          </div>
+        </a>
+        <nav aria-label="Main Navigation">
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#">Tour & Activities</a></li>
+            <li><a href="#">Fast Boat</a></li>
+            <li><a href="#">Booking</a></li>
+          </ul>
+        </nav>
+      </header>
+    </section>
+    <!-- MAIN -->
+    <main>
+      <section class="booking-header">
+        <h1>Book Your Tickets</h1>
+        <p>Book easily and conveniently</p>
+      </section>
+      <!-- BOOKING FORM -->
+      <section class="booking-box">
+        <form id="booking-form">
+          <!-- Trip type -->
+          <div class="trip-type">
+            <label>
+              <input type="radio" name="trip" value="oneway" checked />
+              <strong>ONE WAY</strong>
+            </label>
+            <label>
+              <input type="radio" name="trip" value="return" />
+              <strong>RETURN</strong>
+            </label>
+          </div>
+          <!-- Row 1 -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="from">From</label>
+              <input type="text" id="from" placeholder="Departure Harbor" />
+            </div>
+            <div class="form-group">
+              <label for="to">To</label>
+              <input type="text" id="to" placeholder="Arrival Harbor" />
+            </div>
+          </div>
+          <!-- Row 2 -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="departureDate">Departure Date</label>
+              <input
+                type="date"
+                id="departureDate"
+                placeholder="Select Your Date"
+              />
+            </div>
+            <div class="form-group return-date" id="returnDateGroup">
+              <label for="returnDate">Return Date</label>
+              <input
+                type="date"
+                id="returnDate"
+                placeholder="Select Your Date"
+              />
+            </div>
+          </div>
+          <!-- Row 3 -->
+          <div class="button-row">
+            <button type="submit" class="find-button">
+              <span class="search-icon"
+                ><img src="assets/search-icon.png" alt="search icon"
+              /></span>
+              Find Ticket
+            </button>
+          </div>
+        </form>
+      </section>
+      <script>
+        const tripRadios = document.querySelectorAll('input[name="trip"]');
+        const returnDateGroup = document.getElementById("returnDateGroup");
+
+        tripRadios.forEach((radio) => {
+          radio.addEventListener("change", () => {
+            if (radio.value === "return" && radio.checked) {
+              returnDateGroup.classList.add("show");
+            } else {
+              returnDateGroup.classList.remove("show");
+            }
+          });
+        });
+      </script>
+    </main>
+    <div class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="assets/logo.png" alt="Logo BaliGo" />
+        </div>
+        <div class="social-icon">
+          <a href="#"
+            ><img src="assets/instagram-icon.png" alt="Instragam Icom"
+          /></a>
+          <a href="#"
+            ><img src="assets/whatsapp-icon.png" alt="Whatsapp Icom"
+          /></a>
+          <a href="#"><img src="assets/google-icon.png" alt="Google Icom" /></a>
+          <a href="#"
+            ><img src="assets/linkedin-icon.png" alt="Linkedin Icom"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Manage By PT. BaliGo, Your Friendly And Trusted Booking Agent</p>
+        <p>Copyright &copy; 2026 by BaliGo.com&trade; - All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-bar"></div>
+  </body>
+</html>
