@@ -1,4 +1,4 @@
-const bookingForm = document.getElementById("bookimg-form");
+const bookingForm = document.getElementById("booking-form");
 bookingForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
