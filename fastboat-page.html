@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="fast-boat.css" />
+    <link rel="stylesheet" href="modal-card.css" />
     <link rel="stylesheet" href="footer.css" />
+    <script src="modal-card.js"></script>
     <title>BaliGo Fastboat/Fastboat</title>
   </head>
   <body>
@@ -47,6 +49,9 @@
             </div>
           </div>
         </div>
+        <button class="open-trigger" onclick="openScheduleModal()">
+          Schedule & Routes
+        </button>
       </aside>
       <!-- BOAT RESULT -->
       <div class="boat-page">
@@ -160,5 +165,31 @@
       </div>
     </div>
     <div class="footer-bar"></div>
+    <!-- MODAL CARD -->
+    <div class="overlay" id="scheduleOverlay">
+      <div class="modal-card">
+        <button class="close-btn" id="closeBtn" aria-label="Close">
+          &times;
+        </button>
+        <h1 class="modal-title">Schedule & Routes</h1>
+        <p class="modal-subtitle">Here is our daily schedule & routes</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+              </tr>
+            </thead>
+            <tbody id="scheduleTableBody"></tbody>
+          </table>
+        </div>
+        <div class="book-btn-wrapper">
+          <button class="book-btn" id="bookBtn">Book</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
