@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="fast-boat.css" />
+    <link rel="stylesheet" href="modal-card.css" />
+    <link rel="stylesheet" href="footer.css" />
     <title>BaliGo Fastboat/Fastboat</title>
   </head>
   <body>
@@ -31,7 +33,7 @@
     <main class="fastboat-page">
       <aside class="search-sidebar">
         <button class="change-search" id="changeSearch">Change Search</button>
-        <div class="serch-card">
+        <div class="search-card">
           <span class="departure-label">DEPARTURE</span>
           <p class="date" id="departureDate">Thursday, 27 August 2026</p>
           <div class="route">
@@ -46,6 +48,9 @@
             </div>
           </div>
         </div>
+        <button class="open-trigger" onclick="openScheduleModal()">
+          Schedule & Routes
+        </button>
       </aside>
       <!-- BOAT RESULT -->
       <div class="boat-page">
@@ -135,5 +140,57 @@
         </section>
       </div>
     </main>
+    <div class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="assets/logo.png" alt="Logo BaliGo" />
+        </div>
+        <div class="social-icon">
+          <a href="#"
+            ><img src="assets/instagram-icon.png" alt="Instragam Icom"
+          /></a>
+          <a href="#"
+            ><img src="assets/whatsapp-icon.png" alt="Whatsapp Icom"
+          /></a>
+          <a href="#"><img src="assets/google-icon.png" alt="Google Icom" /></a>
+          <a href="#"
+            ><img src="assets/linkedin-icon.png" alt="Linkedin Icom"
+          /></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Manage By PT. BaliGo, Your Friendly And Trusted Booking Agent</p>
+        <p>Copyright &copy; 2026 by BaliGo.com&trade; - All rights reserved.</p>
+      </div>
+    </div>
+    <div class="footer-bar"></div>
+    <!-- MODAL CARD -->
+    <div class="overlay" id="scheduleOverlay">
+      <div class="modal-card">
+        <button class="close-btn" id="closeBtn" aria-label="Close">
+          &times;
+        </button>
+        <h1 class="modal-title">Schedule & Routes</h1>
+        <p class="modal-subtitle">Here is our daily schedule & routes</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>From</th>
+                <th>To</th>
+                <th>Departure</th>
+                <th>Arrival</th>
+              </tr>
+            </thead>
+            <tbody id="scheduleTableBody"></tbody>
+          </table>
+        </div>
+        <div class="book-btn-wrapper">
+          <button class="book-btn" id="bookBtn">Book</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="modal-card.js"></script>
   </body>
 </html>
