@@ -1,0 +1,142 @@
+/* OVERLAY */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.overlay.active {
+  display: flex;
+}
+
+/* MODAL CARD */
+
+.modal-card {
+  background-color: white;
+  width: 100%;
+  max-width: 720px;
+  max-height: 90vh;
+  padding: 40px 44px 36px;
+  position: relative;
+  overflow-y: auto;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.close-btn {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  background: none;
+  border: none;
+  font-size: 26px;
+  line-height: 1;
+  color: #1c1c1c;
+  cursor: pointer;
+  padding: 4px;
+  transition: opacity 0.15s ease;
+}
+
+.close-btn:hover {
+  opacity: 0.6;
+}
+
+.modal-subtitle {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 28px;
+}
+
+/* TABLE */
+
+.table-wrapper {
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+}
+
+thead th {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+thead th:not(:first-child),
+tbody td:not(:first-child) {
+  border-left: 1px solid #e2e2e2;
+}
+
+tbody td {
+  padding: 15px 20px;
+  font-size: 14.5px;
+  color: #333;
+  border-bottom: 1px solid #e2e2e2;
+  white-space: nowrap;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background-color: #fafafa;
+}
+
+td.time {
+  text-align: right;
+}
+
+/* BOOK BUTTON */
+
+.book-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.book-btn {
+  background-color: #009b00;
+  color: white;
+  border: none;
+  padding: 14px 60px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.1s ease;
+}
+
+.book-btn:hover {
+  background-color: #007f00;
+}
+
+.book-btn:active {
+  transform: scale(0.98);
+}
+
+.open-trigger {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 14px;
+  border-radius: 6px;
+  margin-top: 285px;
+  cursor: pointer;
+}
